@@ -1,7 +1,5 @@
-  
-
+/* To generate HTML from the productss.js file*/  
 let productsHTML ='';
-
 
 products.forEach((product) => {
 
@@ -51,12 +49,22 @@ products.forEach((product) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary js-add-to-cart">
             Add to Cart
           </button>
         </div>`;
 });
 
-console.log(productsHTML);
-
+/* To display the products in the DIV session */
 document.querySelector( '.js-products-grid').innerHTML = productsHTML;
+
+/*To loop through all the ADD TO CART button*/
+
+document.querySelectorAll(".js-add-to-cart")
+    .forEach((button)=> {
+
+        button.addEventListener("click",() => {
+            console.log("added prouct")
+        });
+
+    });
