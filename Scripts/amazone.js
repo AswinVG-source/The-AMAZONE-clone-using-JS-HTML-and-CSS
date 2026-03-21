@@ -74,7 +74,7 @@ function updateCartQuantity (){
       cartQuantity += cartIteam.quantity
     });
 
-    document.querySelector(".js-cart-quantity-count").innerHTL = cartQuantity
+    document.querySelector(".js-cart-quantity-count").innerHTML = cartQuantity
 
 }
 
